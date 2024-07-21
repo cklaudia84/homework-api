@@ -1,0 +1,131 @@
+CRITICAL - 2024-07-18 08:08:43 --> ErrorException: mkdir(): File exists
+[Method: GET, Route: /]
+in SYSTEMPATH\Debug\Toolbar.php on line 404.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH\Debug\Toolbar.php(404): mkdir()
+ 3 SYSTEMPATH\Filters\DebugToolbar.php(43): CodeIgniter\Debug\Toolbar->prepare()
+ 4 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\DebugToolbar->after()
+ 5 SYSTEMPATH\Filters\Filters.php(291): CodeIgniter\Filters\Filters->runAfter()
+ 6 SYSTEMPATH\CodeIgniter.php(409): CodeIgniter\Filters\Filters->runRequired()
+ 7 SYSTEMPATH\CodeIgniter.php(372): CodeIgniter\CodeIgniter->runRequiredAfterFilters()
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-07-18 09:13:26 --> Error: Call to a member function listAll() on null
+[Method: GET, Route: cart]
+in APPPATH\Controllers\Cart.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cart->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+CRITICAL - 2024-07-18 09:13:49 --> Error: Call to a member function listAll() on null
+[Method: GET, Route: cart]
+in APPPATH\Controllers\Cart.php on line 8.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cart->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-07-18 09:15:12 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: YES) in C:\Program Files\Ampps\www\homework-api\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Program Files\Ampps\www\homework-api\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Program Files\Ampps\www\homework-api\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Program Files\Ampps\www\homework-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Program Files\Ampps\www\homework-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\Program Files\Ampps\www\homework-api\app\Models\CartModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Program Files\Ampps\www\homework-api\app\Controllers\Cart.php(13): App\Models\CartModel->listAll()
+#8 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(933): App\Controllers\Cart->index()
+#9 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Program Files\Ampps\www\homework-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Program Files\Ampps\www\homework-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Program Files\Ampps\www\homework-api\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: YES) in C:\Program Files\Ampps\www\homework-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Program Files\Ampps\www\homework-api\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Program Files\Ampps\www\homework-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Program Files\Ampps\www\homework-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\Program Files\Ampps\www\homework-api\app\Models\CartModel.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\Program Files\Ampps\www\homework-api\app\Controllers\Cart.php(13): App\Models\CartModel->listAll()
+#7 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(933): App\Controllers\Cart->index()
+#8 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Program Files\Ampps\www\homework-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Program Files\Ampps\www\homework-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Program Files\Ampps\www\homework-api\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2024-07-18 09:15:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: YES)
+[Method: GET, Route: cart]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\CartModel.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Cart.php(13): App\Models\CartModel->listAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cart->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
+ERROR - 2024-07-18 09:15:47 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'hw-api-php' in C:\Program Files\Ampps\www\homework-api\system\Database\MySQLi\Connection.php:186
+Stack trace:
+#0 C:\Program Files\Ampps\www\homework-api\system\Database\MySQLi\Connection.php(186): mysqli->real_connect()
+#1 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Program Files\Ampps\www\homework-api\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#4 C:\Program Files\Ampps\www\homework-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Program Files\Ampps\www\homework-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#6 C:\Program Files\Ampps\www\homework-api\app\Models\CartModel.php(11): CodeIgniter\BaseModel->findAll()
+#7 C:\Program Files\Ampps\www\homework-api\app\Controllers\Cart.php(13): App\Models\CartModel->listAll()
+#8 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(933): App\Controllers\Cart->index()
+#9 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#10 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#11 C:\Program Files\Ampps\www\homework-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\Program Files\Ampps\www\homework-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#13 C:\Program Files\Ampps\www\homework-api\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#14 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'hw-api-php' in C:\Program Files\Ampps\www\homework-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 C:\Program Files\Ampps\www\homework-api\system\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Program Files\Ampps\www\homework-api\system\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+#3 C:\Program Files\Ampps\www\homework-api\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Program Files\Ampps\www\homework-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+#5 C:\Program Files\Ampps\www\homework-api\app\Models\CartModel.php(11): CodeIgniter\BaseModel->findAll()
+#6 C:\Program Files\Ampps\www\homework-api\app\Controllers\Cart.php(13): App\Models\CartModel->listAll()
+#7 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(933): App\Controllers\Cart->index()
+#8 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+#9 C:\Program Files\Ampps\www\homework-api\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+#10 C:\Program Files\Ampps\www\homework-api\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\Program Files\Ampps\www\homework-api\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+#12 C:\Program Files\Ampps\www\homework-api\public\index.php(56): CodeIgniter\Boot::bootWeb()
+#13 {main}
+CRITICAL - 2024-07-18 09:15:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'hw-api-php'
+[Method: GET, Route: cart]
+in SYSTEMPATH\Database\BaseConnection.php on line 467.
+ 1 SYSTEMPATH\Database\BaseConnection.php(616): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1636): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll()
+ 5 APPPATH\Models\CartModel.php(11): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Cart.php(13): App\Models\CartModel->listAll()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Cart->index()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb()
